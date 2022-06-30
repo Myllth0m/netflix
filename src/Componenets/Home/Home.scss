@@ -1,0 +1,133 @@
+$background: rgb(15, 15, 15);
+
+.banner {
+  height: 600px;
+  background-color: $background;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding: 3rem;
+  box-sizing: border-box;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $background;
+    opacity: .4;
+  }
+
+  > h1, p {
+    color: white;
+    font-size: 3rem;
+    width: 40%;
+    z-index: 10;
+  }
+
+  > p {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    font-weight: 100;
+  }
+
+  > div {
+    display: flex;
+    
+    > button {
+      padding: 1rem;
+      margin: 1rem;
+      width: 200px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      z-index: 10;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .5s;
+
+      &:hover {
+        opacity: .8;
+      }
+
+      &:nth-child(odd) {
+        background-color: white;
+        color: black;
+      }
+
+      &:nth-child(even) {
+        background-color: rgb(76, 76, 76);
+        color: rgb(255, 255, 255);
+      }
+
+      > svg {
+        font-size: 1.8rem;
+        margin: 0 10px;
+      }
+    }
+  }
+
+}
+
+.row {
+  padding: 1rem;
+  background-color: $background;
+
+  > h2 {
+    margin: .3rem;
+    font-weight: 400;
+  }
+  
+  > div {
+    display: flex;
+    overflow-x: auto;
+  }
+}
+
+.card {
+  width: 200px;
+  margin: .3rem;
+  cursor: pointer;
+  transition: transform .2s;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.genre-box {
+  overflow-x: auto;
+  display: flex;
+  height: 100px;
+  background-color: $background;
+  flex: 0;
+
+  > a {
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    min-width: 10rem;
+    padding: 1rem 0;
+    margin: 1rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: rgb(236, 236, 236);
+      font-size: 1.2rem;
+    }
+  }
+}
