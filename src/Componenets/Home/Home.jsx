@@ -82,7 +82,7 @@ const Home = () => {
 
         <div>
           <button><BiPlay /> Play</button>
-          <button>My List <AiOutlinePlus /></button>
+          <button><AiOutlinePlus /> My List</button>
         </div>
       </div>
       <Row title={'Upcoming Movies'} array={upcomingMovies} />
